@@ -1,4 +1,10 @@
 DesignArtifact::Application.routes.draw do
+  resource :calendar, only: [:show], controller: :calendar
+  root to: "calendar#show"
+  get "calendar/show"
+  get "static_pages/home"
+  get "static_pages/help"
+  get "static_pages/about"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -51,6 +57,5 @@ DesignArtifact::Application.routes.draw do
   #   namespace :admin do
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
+  #     # resources :p 
 end
