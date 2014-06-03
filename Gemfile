@@ -11,6 +11,9 @@ group :production do
   gem 'pg'
 end
 
+# Use 'rails_12factor' gem to enable all platform features. Read more: https://devcenter.heroku.com/articles/ruby-support#injected-plugins
+gem 'rails_12factor'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
