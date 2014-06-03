@@ -7,7 +7,7 @@ startTime = ->
   h = today.getHours()
   m = today.getMinutes()
   m = checkTime(m)
-  document.getElementById("clock").innerText = h + ":" + m
+  $("#clock").text(h + ":" + m)
   t = setTimeout(->
     startTime()
     return

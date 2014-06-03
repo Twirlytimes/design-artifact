@@ -1,3 +1,43 @@
 // Place all the styles related to the Calendar controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@font-face {
+  font-family: 'Roboto Thin';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Roboto Thin'), local('Roboto-Thin'), url(http://themes.googleusercontent.com/static/fonts/roboto/v11/vzIUHo9z-oJ4WgkpPOtg1_esZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+@font-face {
+  font-family: 'Roboto Light';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(http://themes.googleusercontent.com/static/fonts/roboto/v11/Hgo13k-tfSpn0qi1SFdUfT8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Regular'), local('Roboto-Regular'), url(http://themes.googleusercontent.com/static/fonts/roboto/v11/2UX7WLTfW3W8TclTUvlFyQ.woff) format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(http://themes.googleusercontent.com/static/fonts/roboto/v11/d-6IYplOFocCacKzxwXSOD8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+
+body { font-family: 'Roboto'; background-color: #dedede; }
+
+a.alarm { display:inline-block; background: url(ic_action_alarms.png) top left / cover no-repeat;}
+a.edit { display:inline-block; background: url(ic_action_edit.png) top left / cover no-repeat;}
+a.map { display:inline-block; background: url(ic_action_map.png) top left / cover no-repeat;}
+a.weather { display:inline-block; background: url(ic_action_brightness_high.png) top left / cover no-repeat;}
+a.view { display:inline-block; background: url(ic_action_view_as_grid.png) top left / cover no-repeat;}
+
+.menu { margin: 3.5em; }
+.menu a { width: 72px; height: 72px; margin: 0 2em; }
+
+.clock { font-family: 'Roboto Thin'; font-size: 5em; color: #fff; margin: 0.5em; }
+.calendar th { font-family: 'Roboto Light'; font-weight: normal; text-transform: uppercase; text-align: center; }
+.calendar td { font-family: 'Roboto Light'; font-size:1.5em; text-align: center; }
