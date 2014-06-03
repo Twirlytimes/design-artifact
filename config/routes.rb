@@ -1,6 +1,6 @@
 DesignArtifact::Application.routes.draw do
   resource :calendar, only: [:show], controller: :calendar
-  root to: "calendar#show"
+  #root to: "calendar#show"
   get "calendar/show"
   get "static_pages/home"
   get "static_pages/help"
