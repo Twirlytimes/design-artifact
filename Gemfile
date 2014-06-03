@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
@@ -12,7 +13,7 @@ group :production do
 end
 
 # Use 'rails_12factor' gem to enable all platform features. Read more: https://devcenter.heroku.com/articles/ruby-support#injected-plugins
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
