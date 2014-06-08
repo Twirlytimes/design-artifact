@@ -41,3 +41,6 @@ a.view { display:inline-block; background: url(ic_action_view_as_grid.png) top l
 .clock { font-family: 'Roboto Thin'; font-size: 5em; color: #fff; margin: 0.5em; }
 .calendar th { font-family: 'Roboto Light'; font-weight: normal; text-transform: uppercase; text-align: center; }
 .calendar td { font-family: 'Roboto Light'; font-size:1.5em; text-align: center; }
+
+.row { overflow: hidden; }
+iframe#glympser { margin-top: -50px; }

@@ -1,4 +1,5 @@
 class Calendar < Struct.new(:view, :date, :callback)
+    
     HEADER = %w[Sun Mon Tue Wed Thu Fri Sat]
     START_DAY = :sunday
  
@@ -25,7 +26,7 @@ class Calendar < Struct.new(:view, :date, :callback)
     end
  
     def day_cell(day)
-      content_tag :td, view.capture(day, &callback), class: day_classes(day)
+      content_tag :td, view.capture(day, &callback), class: day_classes(day), name: day
     end
  
     def day_classes(day)

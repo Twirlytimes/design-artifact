@@ -17,5 +17,31 @@ startTime = ->
 checkTime = (i) ->
   i = "0" + i  if i < 10
   i
-  
-$(document).ready -> startTime()
+
+addIframeStyle = ->
+  $("iframe").each ->
+    injectCSS = ->
+      $head = $iframe.contents().find("head")
+      $div = $iframe.contents().find("div.gvC div:first-child")
+      $div.remove()
+      $head.append $("<link/>",
+        rel: "stylesheet"
+        href: "stylesheets/calendar.css"
+        type: "text/css"
+      )
+      return
+    $iframe = $(this)
+    $iframe.on "load", ->
+      injectCSS()
+      return
+
+    injectCSS()
+    return
+
+  return
+
+
+$(document).ready ->
+  startTime()
+  addIframeStyle()
+  return

@@ -52,4 +52,11 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Use Google Api
+gem 'google-api-client', require: 'google/api_client'
+
+# Use OAuth
+gem 'omniauth'
+gem "omniauth-google-oauth2"
+
 ruby '1.9.3'

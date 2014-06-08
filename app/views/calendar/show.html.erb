@@ -1,3 +1,4 @@
+<%= link_to "Sign in with Google", "/auth/google_oauth2" %>
 <div class="row">
     <div class="col-md-2"><div id="clock" class="clock"></div></div>
     <div class="col-md-8">
@@ -37,29 +38,33 @@
     </div>
 </div>
 <div class="col-md-4">
-  <div class="row"><iframe width="600" height="412" frameborder="0" style="border:0; width:100%;" 
-        src="https://www.google.com/maps/embed/v1/place?q=1th%20arrondissement%20of%20Paris%2C%20Paris%2C%20France&key=AIzaSyA27HkyJnb0ExNSrSaXeX0eJ7x7MnCZ70s"></iframe>
+  <div class="row"><iframe id="glympser" width="600" height="412" src="//glympse.com/ext/!Twirlytimesgroup" scrolling="no" marginheight="0px" marginwidth="0px" frameborder="0" onload="$('#glympser').contents().find('.gcV').css('display','none');"></iframe>
+  <!--<iframe width="600" height="412" frameborder="0" style="border:0; width:100%;" 
+        src="https://www.google.com/maps/embed/v1/place?q=1th%20arrondissement%20of%20Paris%2C%20Paris%2C%20France&key=AIzaSyA27HkyJnb0ExNSrSaXeX0eJ7x7MnCZ70s"></iframe>-->
   </div>
 </div>
 <div class="col-md-4">
-<div class="row">
-  <div class="col-md-12 text-center">
-    <div class="well controls">
-      <%= link_to calendar_path(date: @date - 1.month), class: "btn btn-default" do %>
-        <i class="glyphicon glyphicon-backward"></i>
-      <% end %>
-      <%= "#{@date.strftime("%B")} #{@date.year}" %>
-      <%= link_to calendar_path(date: @date + 1.month), class: "btn btn-default" do %>
-        <i class="glyphicon glyphicon-forward"></i>
-      <% end %>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <div class="well controls">
+          <%= link_to calendar_path(date: @date - 1.month), class: "btn btn-default" do %>
+            <i class="glyphicon glyphicon-backward"></i>
+          <% end %>
+          <%= "#{@date.strftime("%B")} #{@date.year}" %>
+          <%= link_to calendar_path(date: @date + 1.month), class: "btn btn-default" do %>
+            <i class="glyphicon glyphicon-forward"></i>
+          <% end %>
+        </div>
+      </div>
     </div>
-  </div>
+    <div class="row">
+      <div class="col-md-12">
+        <%= calendar @date do |date| %>
+          <%= date.day %>  
+        <% end %>
+      </div>
+    </div>
 </div>
 <div class="row">
-  <div class="col-md-12">
-    <%= calendar @date do |date| %>
-      <%= date.day %>  
-    <% end %>
-  </div>
-</div>
+    <%=  @result.html_safe %>
 </div>
