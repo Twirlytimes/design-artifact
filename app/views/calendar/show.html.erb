@@ -14,6 +14,12 @@
 <div class="col-md-4">
     <div class="row">
           <div class="list-group">
+          <% @todo_array.each do |t| %>
+            <a href="#" class="list-group-item">
+              <h4 class="list-group-item-heading"><%= t["title"] %></h4>
+              <p class="list-group-item-text"><%= t["note"] %></p>
+            </a>
+          <% end %>
             <a href="#" class="list-group-item active">
               <h4 class="list-group-item-heading">List group item heading</h4>
               <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
@@ -22,15 +28,7 @@
               <h4 class="list-group-item-heading">List group item heading</h4>
               <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
             </a>
-            <a href="#" class="list-group-item">
-              <h4 class="list-group-item-heading">List group item heading</h4>
-              <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            </a>
              <a href="#" class="list-group-item">
-              <h4 class="list-group-item-heading">List group item heading</h4>
-              <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            </a>
-            <a href="#" class="list-group-item">
               <h4 class="list-group-item-heading">List group item heading</h4>
               <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
             </a>
@@ -67,4 +65,5 @@
 </div>
 <div class="row">
     <%=  @result.html_safe %>
+    <%=  @array %>
 </div>

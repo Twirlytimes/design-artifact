@@ -43,5 +43,5 @@ addIframeStyle = ->
 
 $(document).ready ->
   startTime()
-  addIframeStyle()
+  #addIframeStyle()
   return

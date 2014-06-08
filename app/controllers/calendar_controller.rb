@@ -37,5 +37,22 @@ class CalendarController < ApplicationController
             @result = result
     end
     @result = "Please, sign in to Google" unless @result != nil
+    
+    require 'fog/wunderlist'
+    require 'pp'
+    
+    service = Fog::Tasks::new:provider => 'Wunderlist',
+                             :wunderlist_username => 'future.sparkle@gmail.com',
+                             :wunderlist_password => 'Kubuliadisu!'
+                             
+    #list = service.lists.find { |l| l.title == 'Groceries' }
+    #service.tasks.each do |task|
+    #    pp task
+    #end
+    
+    
+    grocerieslist = service.list_lists.body.find { |item| item["title"] == "Groceries" }
+    groceries = service.list_tasks.body.select { |item| item["list_id"] == grocerieslist["id"] }
+    @todo_array = groceries
   end
 end

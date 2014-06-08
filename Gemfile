@@ -59,4 +59,8 @@ gem 'google-api-client', require: 'google/api_client'
 gem 'omniauth'
 gem "omniauth-google-oauth2"
 
+# Use Wunderlist
+gem "fog", '1.8'
+gem "fog-wunderlist", '~> 0.1'
+
 ruby '1.9.3'
