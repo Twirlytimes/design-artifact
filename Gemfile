@@ -16,6 +16,7 @@ gem 'rails_12factor', group: :production
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
+gem 'bootstrap-sass', '~> 3.1.1'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -62,5 +63,8 @@ gem "omniauth-google-oauth2"
 # Use Wunderlist
 gem "fog", '1.8'
 gem "fog-wunderlist", '~> 0.1'
+
+# Use Touch Enabled Carousel
+gem 'owlcarousel-rails'
 
 ruby '1.9.3'

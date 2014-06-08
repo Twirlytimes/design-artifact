@@ -31,7 +31,7 @@ class CalendarController < ApplicationController
             result = '<style>'
             events.each do |event| 
                 #date = DateTime.new(event['start']['dateTime'].year,event['start']['dateTime'].month,event['start']['dateTime'].day)
-                result = result +'td[name="' + event['start']['dateTime'].strftime(format="%Y-%m-%d") + '"]{ color : red; } '
+                result = result +'td[name="' + event['start']['dateTime'].strftime(format="%Y-%m-%d") + '"]{ color : white; background : url(../../assets/red_circle.png) no-repeat 45% 65%; } '
             end
             result = result + '</style>'
             @result = result
@@ -54,5 +54,6 @@ class CalendarController < ApplicationController
     grocerieslist = service.list_lists.body.find { |item| item["title"] == "Groceries" }
     groceries = service.list_tasks.body.select { |item| item["list_id"] == grocerieslist["id"] }
     @todo_array = groceries
+    
   end
 end

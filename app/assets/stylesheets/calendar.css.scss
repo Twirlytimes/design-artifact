@@ -26,14 +26,30 @@
   font-weight: 700;
   src: local('Roboto Bold'), local('Roboto-Bold'), url(http://themes.googleusercontent.com/static/fonts/roboto/v11/d-6IYplOFocCacKzxwXSOD8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
 }
+@font-face {
+  font-family: 'Roboto Slab Light';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Slab Light'), local('RobotoSlab-Light'), url(http://themes.googleusercontent.com/static/fonts/robotoslab/v3/dazS1PrQQuCxC3iOAJFEJR_xHqYgAV9Bl_ZQbYUxnQU.woff) format('woff');
+}
+@font-face {
+  font-family: 'Roboto Slab Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Slab Bold'), local('RobotoSlab-Bold'), url(http://themes.googleusercontent.com/static/fonts/robotoslab/v3/dazS1PrQQuCxC3iOAJFEJTqR_3kx9_hJXbbyU8S6IN0.woff) format('woff');
+}
 
 body { font-family: 'Roboto'; background-color: #dedede; }
+
+.bg-white { background: white; }
+.border-white { border: 1px solid white; }
 
 a.alarm { display:inline-block; background: url(ic_action_alarms.png) top left / cover no-repeat;}
 a.edit { display:inline-block; background: url(ic_action_edit.png) top left / cover no-repeat;}
 a.map { display:inline-block; background: url(ic_action_map.png) top left / cover no-repeat;}
 a.weather { display:inline-block; background: url(ic_action_brightness_high.png) top left / cover no-repeat;}
 a.view { display:inline-block; background: url(ic_action_view_as_grid.png) top left / cover no-repeat;}
+a.home { display:inline-block; background: url(homely.png) no-repeat; width: 320px; height: 110px; margin: 30px 0 0 -20px; }
 
 .menu { margin: 3.5em; }
 .menu a { width: 72px; height: 72px; margin: 0 2em; }
@@ -41,6 +57,13 @@ a.view { display:inline-block; background: url(ic_action_view_as_grid.png) top l
 .clock { font-family: 'Roboto Thin'; font-size: 5em; color: #fff; margin: 0.5em; }
 .calendar th { font-family: 'Roboto Light'; font-weight: normal; text-transform: uppercase; text-align: center; }
 .calendar td { font-family: 'Roboto Light'; font-size:1.5em; text-align: center; }
+.today { background: #dedede; }
+.note {margin: 0 40px; background-color: tomato; color: #fff; font-family: 'Roboto Slab Light'; }
+.note h2 { font-family: 'Roboto Slab Bold'; font-size: 24px; }
 
 .row { overflow: hidden; }
+.row div.owl-wrapper-outer { background: white; }
 iframe#glympser { margin-top: -50px; }
+iframe#forecast_embed { margin: -40px 0 0 -36px; }
+
+.photo {max-width: 100%; height: auto; text-align: center; margin: 0 auto; }

@@ -40,8 +40,19 @@ addIframeStyle = ->
 
   return
 
+skycon = ->
+  skycons = new Skycons(color: "tomato")
+  skycons.add document.getElementById("sun"), Skycons.CLEAR_DAY
+  skycons.play()
+  return
+
 
 $(document).ready ->
   startTime()
-  #addIframeStyle()
+  skycon()
+  $(".owl-carousel").owlCarousel items: 3
+  $(".list-group a").click = ->
+  $(this).toggleClass "pressed"
   return
+  return
+  

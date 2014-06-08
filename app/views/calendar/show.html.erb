@@ -1,7 +1,7 @@
-<%= link_to "Sign in with Google", "/auth/google_oauth2" %>
+<div class="row"><div class="col-md-11-offset10"><%= link_to "Sign in with Google", "/auth/google_oauth2", class: "pull-right" %></div></div>
 <div class="row">
     <div class="col-md-2"><div id="clock" class="clock"></div></div>
-    <div class="col-md-8">
+    <div class="col-md-7">
         <nav class="menu">
             <a href="#" title="alarm" class="alarm"></a>
             <a href="#" title="edit" class="edit"></a>
@@ -10,52 +10,44 @@
             <a href="#" title="view" class="view"></a>
         </nav>
     </div>
+    <div class="col-md-3">
+        <a href="#" title="home" class="home"></a>
+    </div>
 </div>
-<div class="col-md-4">
-    <div class="row">
+<div class="row owl-carousel">
+<div class="col-md-12">
+    <div class="row bg-white border-white">
           <div class="list-group">
           <% @todo_array.each do |t| %>
-            <a href="#" class="list-group-item">
+            <a href=javascript:void(0); class="list-group-item <% if (t["starred"] == true) %> active <% end %>" onclick="$(this).toggleClass('pressed');" >
               <h4 class="list-group-item-heading"><%= t["title"] %></h4>
               <p class="list-group-item-text"><%= t["note"] %></p>
             </a>
           <% end %>
-            <a href="#" class="list-group-item active">
-              <h4 class="list-group-item-heading">List group item heading</h4>
-              <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            </a>
-            <a href="#" class="list-group-item">
-              <h4 class="list-group-item-heading">List group item heading</h4>
-              <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            </a>
-             <a href="#" class="list-group-item">
-              <h4 class="list-group-item-heading">List group item heading</h4>
-              <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            </a>
           </div>
     </div>
 </div>
-<div class="col-md-4">
-  <div class="row"><iframe id="glympser" width="600" height="412" src="//glympse.com/ext/!Twirlytimesgroup" scrolling="no" marginheight="0px" marginwidth="0px" frameborder="0" onload="$('#glympser').contents().find('.gcV').css('display','none');"></iframe>
+<div class="col-md-12">
+  <div class="row"><iframe id="glympser" width="600" height="435" src="//glympse.com/ext/!Twirlytimesgroup" scrolling="no" marginheight="0px" marginwidth="0px" frameborder="0" onload="$('#glympser').contents().find('.gcV').css('display','none');"></iframe>
   <!--<iframe width="600" height="412" frameborder="0" style="border:0; width:100%;" 
         src="https://www.google.com/maps/embed/v1/place?q=1th%20arrondissement%20of%20Paris%2C%20Paris%2C%20France&key=AIzaSyA27HkyJnb0ExNSrSaXeX0eJ7x7MnCZ70s"></iframe>-->
   </div>
 </div>
-<div class="col-md-4">
-    <div class="row">
+<div class="col-md-12">
+    <div class="row bg-white">
       <div class="col-md-12 text-center">
         <div class="well controls">
-          <%= link_to calendar_path(date: @date - 1.month), class: "btn btn-default" do %>
+          <%= link_to calendar_path(date: @date - 1.month), class: "btn" do %>
             <i class="glyphicon glyphicon-backward"></i>
           <% end %>
           <%= "#{@date.strftime("%B")} #{@date.year}" %>
-          <%= link_to calendar_path(date: @date + 1.month), class: "btn btn-default" do %>
+          <%= link_to calendar_path(date: @date + 1.month), class: "btn" do %>
             <i class="glyphicon glyphicon-forward"></i>
           <% end %>
         </div>
       </div>
     </div>
-    <div class="row">
+    <div class="row bg-white">
       <div class="col-md-12">
         <%= calendar @date do |date| %>
           <%= date.day %>  
@@ -63,7 +55,23 @@
       </div>
     </div>
 </div>
-<div class="row">
+<div class="col-md-12 center-block">
+    <%= image_tag 'cat.jpg', class: 'photo' %>
+</div>
+<div class="col-md-12">
+    <iframe id="forecast_embed" type="text/html" frameborder="0" height="435" width="115%" src="http://forecast.io/embed/#lat=48.8534100&lon=2.3488000&name=Paris"> </iframe>
+</div>
+<div class="col-md-12 note">
+    <h2>NOTE:</h2><p>What's for dinner?</p>
+</div>
+<div class="col-md-12 center-block">
+    <%= image_tag 'roy-lichtenstein.jpg', class: 'photo' %>
+</div>
+</div>
+</div>
+
+<div class="row clearfix">
+
     <%=  @result.html_safe %>
     <%=  @array %>
 </div>
