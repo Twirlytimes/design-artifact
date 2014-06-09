@@ -43,6 +43,7 @@ body { font-family: 'Roboto'; background-color: #dedede; }
 
 .bg-white { background: white; }
 .border-white { border: 1px solid white; }
+.offset { margin: 5px;}
 
 a.alarm { display:inline-block; background: url(ic_action_alarms.png) top left / cover no-repeat;}
 a.edit { display:inline-block; background: url(ic_action_edit.png) top left / cover no-repeat;}
@@ -61,7 +62,7 @@ a.home { display:inline-block; background: url(homely.png) no-repeat; width: 320
 .note {margin: 0 40px; background-color: tomato; color: #fff; font-family: 'Roboto Slab Light'; }
 .note h2 { font-family: 'Roboto Slab Bold'; font-size: 24px; }
 
-.row { overflow: hidden; }
+.row { overflow: hidden; margin: 0; }
 .row div.owl-wrapper-outer { background: white; }
 iframe#glympser { margin-top: -50px; }
 iframe#forecast_embed { margin: -40px 0 0 -36px; }

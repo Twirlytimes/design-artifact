@@ -36,7 +36,7 @@ class CalendarController < ApplicationController
             result = result + '</style>'
             @result = result
     end
-    @result = "Please, sign in to Google" unless @result != nil
+    @result = "" unless @result != nil
     
     require 'fog/wunderlist'
     require 'pp'

@@ -9,8 +9,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<div id="wrap">
 <%= yield %>
-
+</div>
+<footer>
+    <span class="photo">&copy;</span>
+    <%= image_tag 'http://31.media.tumblr.com/7a626ecb9d9f8d4e4c85c91d88a88816/tumblr_n6wj1j7jwq1qz52i4o1_100.png', class: 'photo' %>
+</footer>
 </body>
 </html>
